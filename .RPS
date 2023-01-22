@@ -1,0 +1,83 @@
+import java.util.Scanner;
+
+public class RPS{
+    public static void main(String[] args){
+        // declare variables
+        int player_one_tally = 0;
+        int player_two_tally = 0;
+        int player_one_move, player_two_move;
+        String playStatus;
+
+        // instantiate a scanner object
+        Scanner input = new Scanner(System.in);
+
+        while(true)
+        {
+
+            // get player move
+            System.out.println("Select a number that represents your move.");
+            System.out.println("1: Rock");
+            System.out.println("2: Paper");
+            System.out.println("3: Scissors\n");
+
+            System.out.print("Player 1 Select move: ");
+            player_one_move = input.nextInt();
+
+            System.out.print("Player 2 Select move: ");
+            player_two_move = input.nextInt();
+
+            //determine outcome 
+            if (player_one_move == player_two_move){
+                System.out.println("Draw\n");
+            }
+            else if(player_one_move == 1 && player_two_move == 3){
+                System.out.println("Player One wins! Rock crushes Scissors!\n");
+                player_one_tally += 1;
+            }
+            else if(player_one_move == 1 && player_two_move == 2){
+                System.out.println("Player Two wins! Paper covers Rock!\n");
+                player_two_tally += 1;
+            }
+            else if(player_one_move == 2 && player_two_move == 1){
+                System.out.println("Player One wins! Paper covers Rock!\n");
+                player_one_tally += 1;
+            }
+            else if(player_one_move == 2 && player_two_move == 3){
+                System.out.println("Player Two wins! Scissors cut Paper!\n");
+                player_two_tally += 1;
+            }
+            else if(player_one_move == 3 && player_two_move == 1){
+                System.out.println("Player Two wins! Rock crushes scissors\n");
+                player_two_tally += 1;
+            }
+            else if(player_one_move == 3 && player_two_move == 2){
+                System.out.println("Player One wins! Scissors cut paper\n");
+                player_one_tally += 1;
+            }
+
+            Scanner input2 = new Scanner(System.in);
+            System.out.print("Do you want to play some more? y/n : ");
+            playStatus = input2.nextLine();
+
+            // continue or stop playing?
+            if (playStatus.equals("n")){
+                break;
+            }
+        }
+
+        // print tally
+        System.out.println("Game Over!");
+        System.out.println("Player One Score:" + player_one_tally);
+        System.out.println("Player Two Score:" + player_two_tally);
+
+        if(player_one_tally > player_two_tally){
+            System.out.println("Player One Wins!");
+        }
+        else if(player_one_tally < player_two_tally){
+            System.out.println("Player Two Wins!");
+        }
+        else{
+            System.out.println("Its a draw!");
+        }
+    }
+}
