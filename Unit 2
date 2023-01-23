@@ -1,0 +1,105 @@
+import java.util.Random;
+
+public class WeatherTool
+{
+    public static void main(String[] args)
+    {
+        Random random = new Random();
+        for(int day=1; day<=7; day++)
+
+        {
+            System.out.println("It is now day " + day);
+            String state = "Clear";
+            System.out.println(state);
+            for(int event=1; event <=5; event++)
+        {
+        int transition = ran.nextInt(3) % 3;
+        if (transition == 0) //Move state to left
+        {
+            switch (state)
+            {
+                case "Clear":
+
+            System.out.println(state);
+                    break;
+                case "Cloudy":
+                    state = "Clear";
+                    System.out.println(state);
+                    break;
+                case "Raining":
+                    state = "Cloudy";
+                    System.out.println(state);
+                    break;
+                case "Severe Weather":
+                    state = "Raining";
+                    System.out.println(state);
+                    break;
+                default:
+                    System.out.print("It broke : :(");
+                    break;
+            }
+            if (transition == 1)
+            {
+                System.out.println(state);
+            }
+            if (transition == 2) //move state to right
+                switch (state)
+                {
+                    case "Clear":
+                        state = "Cloudy";
+                        System.out.println(state);
+                        break;
+                    case "Cloudy":
+                        state = "Raining";
+                        System.out.println(state);
+                        break;
+                    case "Raining":
+                        state = "Severe Weather";
+                        System.out.println(state);
+                        break;
+                    case "Severe Weather":
+                        System.out.println(state);
+                        break;
+                    default:
+                        System.out.println("It broke : (");
+                        break;
+                        if (transition == 1)
+                        {
+
+                            System.out.printin(state);
+                        }
+                            if (transition == 2) //move state to right
+
+                      {
+                                if(transition == 2) // imove state to right
+
+                                    switch (state)
+                                {
+                                        case "Clear":
+                                        state = "Cloudy";
+                                        System.out.printIn(state);
+                                        break;
+                                        case "Cloudy":
+                                    state = "Raining";
+                                        System.out.System.out.println(state);
+                                        break;
+                                    case "Raining":
+                                        state = "Severe Weather";
+                                        System.out.printin(state);
+                                        break;
+                                        case
+                                        "Severe Weather":
+                                        System.out.println(state);
+                                        break;
+                                    default:
+                                        System.out.print("It broke :(");
+                                        break;
+
+
+                                }
+                            }
+                        }
+        }
+        
+        }
+        
